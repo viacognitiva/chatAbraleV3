@@ -1,9 +1,11 @@
-  body{
-    background: transparent
-  }
   html, body, #wrapper {
     margin: 0;
     padding: 0;
+  }
+  p{
+    margin: 0 auto 20px;
+    width:57%;
+    clear: both;
   }
   h1 {
       font-weight: bold;
@@ -12,10 +14,11 @@
       color:#fff
   }
   label {
-      color: #fff;
+      color: #000;
+      font-size:17px
   }
   .observacao {
-      color: #fff;
+      color: #000;
       font-size: 12px;
   }
   .audio{
@@ -33,6 +36,26 @@
   .som a{
     padding:5px
   }
+  .inicio{
+    background-color: #eaeaea;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%
+  }
+  .img_ale{
+    width:50%;
+    float:left
+  }
+  .textoInicio{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+  }
+  .btn{
+    padding: 13px 27px;
+    font-size:19px;
+   }
   .btn:active{
     box-shadow:none
   }
@@ -46,49 +69,66 @@
     right:10px
   }
   .box-header{
-    background-color:#3c8dbc;
+    background:linear-gradient(45deg, #C92C49,#ff718b);
   }
   .box-header .box-title{
-      color:#fff;
-      font-size: 23px;
+    color:#fff;
+    margin-top: 10px;
+    font-size:18px;
+    font-weight:bold
   }
   .box{
-    background-color: transparent;
-    margin-bottom:0
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0;
+    box-shadow: none;
+    border-top: 0;
+    margin-bottom: 0;
   }
   .box.box-primary{
-    border-top-color:#3c8dbc;
+    border-top-color:#ffc4c4;
   }
   .box-header.with-border{
-    border:0
+    border:0;
+    height: 60px;
   }
   #wrapper {
     background-color: #ecf0f1;
   }
   #chat_box {
     box-sizing: border-box;
-    height:90%;
+    height:77%;
     overflow: auto;
-    padding-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px 0;
   }
-  .direct-chat-text{
-    background: #d2d6de;
-    border: 1px solid #d2d6de;
+  .direct-chat-img{
+    border-radius: 0;
+    width: 67px;
+    height: auto;
   }
-  .direct-chat-text:after, .direct-chat-text:before{
-    border-right-color: #d2d6de;
+  .direct-chat-img-user{
+    border-radius: 33px;
+    width: 67px;
+    height: auto;
+    float: right;
   }
-  .direct-chat-text, .right .direct-chat-text, .direct-chat-msg{
-          margin:0
+  .direct-chat-text, .direct-chat-primary .right>.direct-chat-text{
+    background: none;
+    border: 0;
+    padding:0;
+    color:#000;
+    font-size: 20px;
+    margin: 0 85px;
   }
   .direct-chat-primary .right>.direct-chat-text{
-    background: #fff;
-    border-color: #fff;
-    color:#000;
+    margin: 10px 85px 0 85px;
+     ext-align: right;
+    color: #969696;
+  }
+  .direct-chat-text:after, .direct-chat-text:before{
+    border-right-color: transparent;
   }
   .direct-chat-primary .right>.direct-chat-text:after, .direct-chat-primary .right>.direct-chat-text:before{
-    border-left-color: #fff;
+    border-left-color: transparent;
   }
   #footer {
     box-sizing: border-box;
@@ -99,48 +139,71 @@
     background-color: #2980b9;
   }
   .btn-primary {
-    background-color: #3c8dbc;
-    border-color: #367fa9;
+    background-color: #00888A;
+    border-color: #00888A;
   }
-  .btn-primary.focus, .btn-primary:focus{
-    background-color: #3c8dbc;
+  .btn-primary.focus, .btn-primary:focus, .btn-primary:active:hover{
+    background-color: #00888A;
+    border-color: transparent;
   }
   .btn-primary:hover, .btn-primary:active, .btn-primary.hover{
-    background-color: #367fa9;
+    background-color: #00888A;
+    border-color:transparent;
+    transform: scale(1.05);
   }
   .box-footer{
-    background-color: #d2d6de;
+    background-color: #eaeaea;
+    text-align:center;
+    position: fixed;
+    height: 150px;
+    bottom: 0;
+    width:-moz-available;
   }
   #footer .content {
     padding-top: 4px;
     position: relative;
   }
-
+  .box-footer .input-group{
+    width: 85%;
+    margin: 38px auto;
+  }
+  .form-control{
+    background-color:transparent;
+    border:0;
+    border-bottom:1px solid #d2d6de;
+    font-size:26px;
+    height:50px;
+    padding:2px;
+  }
+  .login .form-control{
+    border:1px solid #d2d6de;
+    padding:2px 10px;
+}
   #user { width: 20%; }
   #message { //width: 68%; }
   #send_btn {
-   // width: 10%;
-    //position: absolute;
-    //right: 0;
-    //bottom: 0;
-    //margin: 0;
+    border-radius: 28px;
   }
-
   .content {
-    width: 100%;
-    margin: 0 auto;
-    min-height:300px;
-    background-color: rgba(0, 0, 0, 0.6);
+    width: 98%;
+    margin: 0px auto;
   }
-
+  #corpo{
+    margin: 50px auto;
+  }
   .avaliacao{
-    background-color:#666;
-    height:403px;
     overflow: auto;
   }
-
+  .avaliacao label{
+    font-size:20px
+  }
   .avaliacao .form-group{
-    margin-bottom:10px;
+    margin-bottom:20px;
+  }
+
+  .avaliacao .form-control{
+      border:1px solid #d2d6de;
+      padding: 6px 12px;
   }
 
   .avaliacao label{
@@ -148,10 +211,11 @@
   }
 
   .avaliacao p{
-    margin: 100px 0;
-    color: #fff;
+    margin: 150px 0;
     text-align: center;
     font-size: 20px;
+    font-weight:bold;
+    width:100%
   }
 
   #system,
@@ -167,51 +231,66 @@
   .escrevendo-img{
     width:45px
   }
-  .dataHora{
-    text-align:right;
-    color:#ddd;
-    font-size:12px
-  }
-  .dataHoraUser{
-    text-align:left;
-    color:#ddd;
-    font-size:12px;
-  }
   .erro{
     border:2px solid #f00!important;
   }
-  .ok{
-    border:0px!important;
-  }
   .joia a.positivo{
-    color: #fff;
+    color: #000;
     font-size: 21px;
     margin:0 15px;
   }
   .joia a.negativo{
-    color: #fff;
+    color: #000;
     font-size: 21px;
   }
   .observacao{
-    font-size:11px;
-    color:#fff
+    font-size:13px;
+    color:#000
   }
   .alerta{
     font-size:12px;
-    color: #fff;
+    color: #000;
     font-weight:bold;
     margin-bottom: 8px;
   }
-  @media (min-width: 992px){
-    .col-md-3 {
-      width: 50%;
-      margin: 0 auto;
-      float: none;
+  @media screen and (max-width: 600px) {
+    p{
+        width:90%
     }
-
-  }
-  @media (max-width: 600px){
-    .avaliacao p{
-      font-size:16px
+    .row{
+        margin-right: 0;
+        margin-left: 0
+    }
+    #chat_box{
+        padding: 40px 0;
+    }
+    .direct-chat-img{
+        width:58px
+    }
+    .direct-chat-img-user{
+        width: 58px;
+    }
+    .logoAbrale img {
+        width: 55px;
+        margin: 68px 0 0;
+    }
+    .direct-chat-text, .direct-chat-primary .right>.direct-chat-text{
+        font-size: 16px;
+        margin: 0 0 0 70px;
+    }
+    .direct-chat-primary .right>.direct-chat-text{
+        margin: 0 70px 0 0;
+    }
+    .btn {
+        padding: 4px 14px;
+        font-size: 17px;
+    }
+    .form-control{
+        font-size: 17px;
+        height: 34px;
+    }
+    .box-footer .input-group{
+        width: 90%;
+        margin: 40px auto;
     }
   }

@@ -94,10 +94,10 @@
                                             console.log('Error: ' + JSON.stringify(error));
                                         }
 
-                                    } else if(response.data.output.nodes_visited[0] === 'Despedida'){
+                                    } else if(response.data.output.nodes_visited[0] === 'node_2_1535721581822'){
                                         $location.path('/fim');
                                         return false;
-                                    } else if(response.data.output.nodes_visited[0] === 'node_10_1535121665869'){
+                                    } else if(response.data.output.nodes_visited[0] === 'node_1_1535721435398'){
                                         $location.path('/aval');
                                         return false;
                                     } else {
@@ -215,17 +215,15 @@
                      var div = document.createElement('div');
                      var div0 = document.createElement('div');
 
-                     var divHora = document.createElement('div');
-                     var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
-                     divHora.setAttribute("class", "dataHoraUser" );
-                     divHora.appendChild(textHora);
-
                      var user = document.createTextNode(' ');
                      var userBox = document.createElement('span');
                      userBox.className = 'direct-chat-name pull-left';
                      div0.className = 'direct-chat-msg right';
                      div.className = 'direct-chat-text';
-
+                     var img = document.createElement('img');
+                     img.className = 'direct-chat-img-user';
+                     img.src = 'assets/images/img_usuario.png';
+                     div0.appendChild(img);
                      div0.appendChild(div);
 
                      userBox.appendChild(user);
@@ -235,7 +233,6 @@
                      messageBox.appendChild(userBox);
                      div.appendChild(message);
                      messageBox.appendChild(div0);
-                     messageBox.appendChild(divHora);
                      chat.appendChild(messageBox);
 
                 } else {
@@ -244,6 +241,9 @@
 
                     var user = document.createTextNode(' ');
                     var userBox = document.createElement('span');
+                    user = document.createElement('img');
+                    user.className = 'direct-chat-img';
+                    user.src = 'assets/images/abrale_ale.png';
                     div.className = 'direct-chat-text';
 
                     userBox.appendChild(user);
@@ -275,12 +275,6 @@
                         $( ".direct-chat-text" ).last().css( "width", "" );
                         $( ".direct-chat-text" ).last().append( textoFormat);
 
-                        var divHora = document.createElement('div');
-                        var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
-                        divHora.setAttribute("class", "dataHora" );
-                        divHora.appendChild(textHora);
-                        messageBox.appendChild(divHora);
-
                     }
 
                 }
@@ -308,16 +302,10 @@
 
            function ocultaAguarde(messageBox,divEscrevendo, textoFormat) {
 
-                var divHora = document.createElement('div');
-                var textHora= document.createTextNode(addZero(new Date().getDate())+"/"+(addZero(new Date().getMonth()+1))+"  "+addZero(new Date().getHours())+":"+addZero(new Date().getMinutes()));
-                divHora.style='text-align:right;color:#cfcfcf;font-size:12px';
-                divHora.appendChild(textHora);
-
                 divEscrevendo.style.display = "none";
                 $( ".direct-chat-text" ).last().empty();
                 $( ".direct-chat-text" ).last().css( "width", "" );
                 $( ".direct-chat-text" ).last().append( textoFormat);
-                messageBox.appendChild(divHora);
 
            }
 
