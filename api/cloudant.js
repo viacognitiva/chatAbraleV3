@@ -8,13 +8,8 @@ var http = require("http");
 var app = express();
 app.set('port', process.env.PORT || 3000);
 
-var protocol = process.env.NODE_ENV == 'production' ? "https" : "http" ;
 
-var cloudant_url = process.env.CLOUDANT_URL;
-var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
-var user = process.env.CLOUDANT_USER;
-var password = process.env.CLOUDANT_PASSWORD;
-var cloudantDB = Cloudant(cloudant_url);
+var cloudantDB = Cloudant(process.env.CLOUDANT_URL);
 
 db = cloudantDB.db.use(process.env.CLOUDANT_DB);
 dbOutros = cloudantDB.db.use(process.env.CLOUDANT_DBTREINO);
@@ -78,7 +73,8 @@ var cloudant = {
             data: dataNow },function(err, body, header) {
 
                 if (err) {
-                    return console.log('[dbUser.insert] ', err.message);
+                    console.log('[dbUser.insert] ', err.message);
+                    return err;
                 }
                 res.status(200).send("/chat");
             });
