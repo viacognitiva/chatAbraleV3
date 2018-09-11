@@ -18,7 +18,7 @@
                 nome = $localStorage.dadosBKP.nome
             }
 
-            vm.messageExit = nome + ', a ViaCognitiva agradece a sua visita e fica à sua disposição.';
+            vm.messageExit = nome + ', a Abrale agradece a sua visita e fica à sua disposição.';
 
 
            function restartChat() {
