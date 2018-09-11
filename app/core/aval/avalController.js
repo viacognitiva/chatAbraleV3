@@ -38,6 +38,11 @@
             }
 
             var info = $localStorage.dadosBKP;
+
+            if(!info){
+                info = $localStorage.dados;
+            }
+
             var dados = {
                 chatId: info.chatId,
                 nome:info.nome,
