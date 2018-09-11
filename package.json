@@ -6,8 +6,8 @@
     "start": "node chatbot.js"
   },
   "dependencies": {
+    "@cloudant/cloudant": "^2.3.0",
     "body-parser": "1.14.x",
-    "cloudant": "^1.10.0-NOTICE",
     "dotenv": "*",
     "dotenv-safe": "^4.0.4",
     "express": "4.13.x",

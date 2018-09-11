@@ -1,6 +1,6 @@
 require('dotenv-safe').load();
 
-var Cloudant = require('cloudant');
+var Cloudant = require('@cloudant/cloudant');
 var express = require('express');
 var request = require('request');
 var http = require("http");

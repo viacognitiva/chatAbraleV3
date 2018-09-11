@@ -7,6 +7,7 @@
         'app.user',
         'app.chat',
         'app.aval',
+        'app.saudacao',
         'app.fim',
         'app.directives.divSize'
     ]);
