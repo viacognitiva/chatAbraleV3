@@ -41,7 +41,6 @@
     margin:0;
     padding:0;
     width:100%;
-    height:100%
   }
   .inicio:after {
     content: "";
@@ -54,13 +53,15 @@
     text-align:center;
     margin: auto 0
   }
-  .img_ale img{
-    width:48%;
-    height:100%;
-    object-fit: cover;
+  .img_ale{
+    background: url("../images/abrale_aleInt.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    height:100vh;
   }
   .textoInicio{
-    font-size:60px;
+    font-size:50px;
     font-weight:bold;
     margin: 0;
     position: absolute;
@@ -69,6 +70,8 @@
   }
   .textoInicio a{
     color: #C92C49;
+    font-size:35px;
+    font-weight:bold;
   }
   .textoInicio a:hover, .textoInicio a:focus, .textoInicio a:active{
     color: #943f4e;
@@ -95,7 +98,7 @@
   .box-header .box-title{
     color:#fff;
     margin-top: 10px;
-    font-size:18px;
+    font-size:22px;
     font-weight:bold
   }
   .box{
@@ -119,7 +122,7 @@
     box-sizing: border-box;
     height:77%;
     overflow: auto;
-    padding: 50px 0;
+    padding: 40px 0;
     margin:0 15px
   }
   .direct-chat-img{
@@ -216,7 +219,7 @@
     overflow: auto;
   }
   .avaliacao label{
-    font-size:20px
+    font-size:22px
   }
   .avaliacao .form-group{
     margin-bottom:20px;
@@ -234,9 +237,12 @@
   .avaliacao p{
     margin: 150px 0;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     font-weight:bold;
     width:100%
+  }
+  .btn{
+    border-radius:27px
   }
 
   #system,
