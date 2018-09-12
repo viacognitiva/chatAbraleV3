@@ -8,25 +8,9 @@ var http = require("http");
 var app = express();
 app.set('port', process.env.PORT || 3000);
 
-var protocol = process.env.NODE_ENV == 'production' ? "https" : "http" ;
 
-var cloudant_url = process.env.CLOUDANT_URL;
-var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
-var user = process.env.CLOUDANT_USER;
-var password = process.env.CLOUDANT_PASSWORD;
+var cloudantDB = Cloudant(process.env.CLOUDANT_URL);
 
-if(process.env.VCAP_SERVICES) {
-
-    services = JSON.parse(process.env.VCAP_SERVICES);
-
-    if(services.cloudantNoSQLDB) {
-        cloudant_url = services.cloudantNoSQLDB[0].credentials.url;
-        user = services.cloudantNoSQLDB[0].credentials.username;
-        password = services.cloudantNoSQLDB[0].credentials.password;
-    }
-}
-
-var cloudantDB = Cloudant({url:cloudant_url, account:user, password:password});
 db = cloudantDB.db.use(process.env.CLOUDANT_DB);
 dbOutros = cloudantDB.db.use(process.env.CLOUDANT_DBTREINO);
 dbUser = cloudantDB.db.use(process.env.CLOUDANT_DBUSUARIO);
@@ -89,7 +73,8 @@ var cloudant = {
             data: dataNow },function(err, body, header) {
 
                 if (err) {
-                    return console.log('[dbUser.insert] ', err.message);
+                    console.log('[dbUser.insert] ', err.message);
+                    return err;
                 }
                 res.status(200).send("/chat");
             });
