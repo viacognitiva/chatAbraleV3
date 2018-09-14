@@ -271,13 +271,12 @@
     font-size: 21px;
   }
   .observacao{
-    font-size:13px;
+    font-size:14px;
     color:#000
   }
   .alerta{
-    font-size:12px;
+    font-size:14px;
     color: #000;
-    font-weight:bold;
     margin-bottom: 8px;
   }
   @media screen and (max-width: 600px) {
