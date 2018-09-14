@@ -146,7 +146,7 @@
   }
   .direct-chat-primary .right>.direct-chat-text{
     margin: 10px 85px 0 85px;
-     ext-align: right;
+    text-align: right;
     color: #969696;
   }
   .direct-chat-text:after, .direct-chat-text:before{
