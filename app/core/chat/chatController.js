@@ -41,6 +41,7 @@
                 }
 
                 var config = {headers : {'Content-Type': 'application/json; charset=utf-8'}};
+                var noVisitado = '';
 
                 $http.post('/api/watson',params,config).then(
 
@@ -79,9 +80,17 @@
                                 }
 
                                 if (!message == ''){
+                                    
+                                    if (angular.isArray(response.data.output.nodes_visited)){
+                                        angular.forEach(response.data.output.nodes_visited, function (value,key) {
+                                            if (value == 'Outros' || value == 'Sem resposta' ||
+                                                value == 'Em outros casos' || value == 'node_14_1536240801910') {
+                                                noVisitado = 'S';
+                                            }
+                                        });
+                                    }
 
-                                    if(response.data.output.nodes_visited === 'Outros' ||
-                                        response.data.output.nodes_visited === 'Sem resposta') {
+                                    if (noVisitado == 'S') {
 
                                         var logData = {
                                             idchat: idchat,
