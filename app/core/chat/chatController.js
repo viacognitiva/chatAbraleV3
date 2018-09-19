@@ -80,7 +80,8 @@
 
                                 if (!message == ''){
 
-                                    if(response.data.output.nodes_visited === 'Outras Opções') {
+                                    if(response.data.output.nodes_visited === 'Outros' ||
+                                        response.data.output.nodes_visited === 'Sem resposta') {
 
                                         var logData = {
                                             idchat: idchat,
