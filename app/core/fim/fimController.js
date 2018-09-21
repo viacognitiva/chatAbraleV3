@@ -27,7 +27,7 @@
            }
 
             function restartUser() {
-                  $location.path('/user');
+                  $location.path('/saudacao');
               }
 
         }
