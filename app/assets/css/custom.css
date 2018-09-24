@@ -47,12 +47,6 @@
     display: table;
     clear: both;
   }
-  .coluna{
-    width:50%;
-    float:left;
-    text-align:center;
-    margin: auto 0
-  }
   .img_ale{
     background: url("../images/abrale_aleInt.png");
     background-repeat: no-repeat;
@@ -60,18 +54,27 @@
     background-position:center;
     height:100vh;
   }
+  .logos{
+    background: url("../images/logos.png");
+    background-repeat: no-repeat;
+    background-size:75%;
+    background-position:center;
+    height:25vh;
+    background-color:#fff;
+    margin: 0 -15px;
+  }
+  .direita{
+    text-align:center;
+  }
   .textoInicio{
-    font-size:50px;
-    font-weight:bold;
-    margin: 0;
-    position: absolute;
-    top: 30%;
-    left: 45%;
+    margin: 50px 5px 80px;
   }
   .textoInicio a{
     color: #C92C49;
-    font-size:35px;
-    font-weight:bold;
+  }
+  .textoInicio p{
+    font-size:30px;
+    width:100%
   }
   .textoInicio a:hover, .textoInicio a:focus, .textoInicio a:active{
     color: #943f4e;
@@ -323,3 +326,15 @@
         margin: 40px auto;
     }
   }
+    @media screen and (max-height: 650px) {
+        .textoInicio{
+            margin: 35px 5px 50px;
+        }
+        .textoInicio p{
+            font-size:26px;
+        }
+        .logos{
+            background-size:70%;
+            height:30vh;
+        }
+    }
