@@ -55,19 +55,21 @@
     height:100vh;
   }
   .logos{
-    background: url("../images/logos.png");
-    background-repeat: no-repeat;
-    background-size:75%;
-    background-position:center;
-    height:25vh;
+    height:100%;
     background-color:#fff;
     margin: 0 -15px;
+    border-radius: 55px 0 55px;
   }
+  .logos img{
+  background-color:#fff;
+  padding:20px
+  }
+
   .direita{
     text-align:center;
   }
   .textoInicio{
-    margin: 50px 5px 80px;
+    margin: 50px 5px 200px;
   }
   .textoInicio a{
     color: #C92C49;
@@ -221,11 +223,16 @@
   #corpo{
     margin: 50px auto;
   }
-  .avaliacao{
+  .avaliacao, .final{
     overflow: auto;
+    /*background: linear-gradient(to bottom left, #809746, #eef3d5); */
+    height:100%
   }
   .avaliacao label{
     font-size:22px
+  }
+  .avaliacao form{
+    float:left
   }
   .avaliacao .form-group{
     margin-bottom:20px;
@@ -234,18 +241,22 @@
   .avaliacao .form-control{
       border:1px solid #d2d6de;
       padding: 6px 12px;
+      background-color: #fff;
   }
 
   .avaliacao label{
     font-weight:normal
   }
 
-  .avaliacao p{
+  .avaliacao p, .final p{
     margin: 150px 0;
     text-align: center;
     font-size: 22px;
     font-weight:bold;
     width:100%
+  }
+  .final{
+    float:center
   }
   .btn{
     border-radius:27px
@@ -284,6 +295,16 @@
     font-size:14px;
     color: #000;
     margin-bottom: 8px;
+  }
+  .ale{
+    float: right;
+    width: 25%;
+    background: url(../images/ale2.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 400px;
+    z-index: 1;
+    background-size: contain;
   }
   @media screen and (max-width: 600px) {
     p{
@@ -326,9 +347,9 @@
         margin: 40px auto;
     }
   }
-    @media screen and (max-height: 650px) {
+    @media screen and (max-height: 680px) {
         .textoInicio{
-            margin: 35px 5px 50px;
+            margin: 35px 5px 180px;
         }
         .textoInicio p{
             font-size:26px;
@@ -336,5 +357,6 @@
         .logos{
             background-size:70%;
             height:30vh;
+            border-radius: 45px 0 45px;
         }
     }
